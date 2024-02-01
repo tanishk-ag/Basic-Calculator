@@ -54,7 +54,7 @@
             }
         }
 
-        function initialize_app(){
+        function initialize_app() {
             cal_button = document.getElementById("calculate")
             cal_button.addEventListener("click", math_calculate)
         }
@@ -62,13 +62,78 @@
 </head>
 
 <body onload="initialize_app()">
-    <div class="container text-center">
-        <div class="row">
+    <div class="container mt-5">
+        <div class="row justify-content-evenly mt-2">
+            <div class="col">
+            </div>
+            <div class="col mx-auto">
+                <input type="input" id="expression" placeholder="Type Expression here" class="form-control">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row justify-content-evenly mt-2">
+            <div class="col">
+            </div>
+            <div class="col mx-auto">
+                <button id="calculate" class="btn btn-success">7 </button>
+                <button id="calculate" class="btn btn-success">8 </button>
+                <button id="calculate" class="btn btn-success">9 </button>
+                <button id="calculate" class="btn btn-success">/ </button>
+                <button id="calculate" class="btn btn-success">← </button>
+                <button id="calculate" class="btn btn-success">C </button>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row justify-content-evenly mt-2">
+            <div class="col">
+            </div>
+            <div class="col mx-auto">
+                <button id="calculate" class="btn btn-success">4 </button>
+                <button id="calculate" class="btn btn-success">5 </button>
+                <button id="calculate" class="btn btn-success">6 </button>
+                <button id="calculate" class="btn btn-success">* </button>
+                <button id="calculate" class="btn btn-success">( </button>
+                <button id="calculate" class="btn btn-success">) </button>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row justify-content-evenly mt-2">
+            <div class="col">
+            </div>
+            <div class="col mx-auto">
+                <button id="calculate" class="btn btn-success">1 </button>
+                <button id="calculate" class="btn btn-success">2 </button>
+                <button id="calculate" class="btn btn-success">3 </button>
+                <button id="calculate" class="btn btn-success">- </button>
+                <button id="calculate" class="btn btn-success">x² </button>
+                <button id="calculate" class="btn btn-success">√ </button>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row justify-content-evenly mt-2">
+            <div class="col">
+            </div>
+            <div class="col mx-auto">
+                <button id="calculate" class="btn btn-success">0 </button>
+                <button id="calculate" class="btn btn-success">00 </button>
+                <button id="calculate" class="btn btn-success">. </button>
+                <button id="calculate" class="btn btn-success">+ </button>
+                <button id="calculate" class="btn btn-success">= </button>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        
+
+
+        <div class="row justify-content-evenly mt-2">
             <div class="col">
             </div>
             <div class="col">
-                <input type="input" id="expression" placeholder="Type Expression here" class="form-control">
-                <button id="calculate" class="btn btn-success">Calculate </button>
 
                 <div id="log">
                     <h6>Log:</h6>
