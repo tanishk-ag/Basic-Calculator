@@ -54,6 +54,22 @@
             }
         }
 
+        function sqrt() {
+            expression = document.getElementById("expression").value;
+
+            if (expression) {
+                try {
+                    answer = math.sqrt( math.evaluate(expression));
+                    console.log("√("+ expression + ") = " + answer);
+                    document.getElementById("expression").value = answer;
+                    addLog("√("+ expression + ") = " + answer);
+                } catch (e) {
+                    console.log("Bad Expression");
+                    addLog("√("+ expression + ") is BAD. Please fix it.");
+                }
+            }
+        }
+
         function initialize_app() {
             cal_button = document.getElementById("=");
             cal_button.addEventListener("click", math_calculate);
@@ -125,7 +141,7 @@
                 <button class="btn btn-secondary" onclick="input_val('2')">2 </button>
                 <button class="btn btn-secondary" onclick="input_val('3')">3 </button>
                 <button class="btn btn-primary" onclick="input_val('-')">- </button>
-                <button class="btn btn-outline-secondary" onclick="power()">^ </button>
+                <button class="btn btn-outline-secondary" onclick="input_val('^')">^ </button>
                 <button class="btn btn-outline-secondary" onclick="sqrt()">√ </button>
             </div>
             <div class="col">
