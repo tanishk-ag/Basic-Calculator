@@ -55,9 +55,26 @@
         }
 
         function initialize_app() {
-            cal_button = document.getElementById("calculate")
-            cal_button.addEventListener("click", math_calculate)
+            cal_button = document.getElementById("=");
+            cal_button.addEventListener("click", math_calculate);
         }
+
+        function input_val(v) {
+            expression = document.getElementById("expression").value;
+            expression = expression + v;
+            document.getElementById("expression").value = expression;
+        }
+
+        function back() {
+            expression = document.getElementById("expression");
+            expression.value = expression.value.slice(0,-1);
+        }
+        function clean() {
+            expression = document.getElementById("expression");
+            expression.value = '';
+        }
+
+
     </script>
 </head>
 
@@ -76,12 +93,12 @@
             <div class="col">
             </div>
             <div class="col mx-auto">
-                <button id="calculate" class="btn btn-success">7 </button>
-                <button id="calculate" class="btn btn-success">8 </button>
-                <button id="calculate" class="btn btn-success">9 </button>
-                <button id="calculate" class="btn btn-success">/ </button>
-                <button id="calculate" class="btn btn-success">← </button>
-                <button id="calculate" class="btn btn-success">C </button>
+                <button class="btn btn-secondary" onclick="input_val('7')">7 </button>
+                <button class="btn btn-secondary" onclick="input_val('8')">8 </button>
+                <button class="btn btn-secondary" onclick="input_val('9')">9 </button>
+                <button class="btn btn-primary" onclick="input_val('/')">/ </button>
+                <button class="btn btn-outline-danger" onclick="back()">← </button>
+                <button class="btn btn-outline-danger" onclick="clean()">C </button>
             </div>
             <div class="col">
             </div>
@@ -90,12 +107,12 @@
             <div class="col">
             </div>
             <div class="col mx-auto">
-                <button id="calculate" class="btn btn-success">4 </button>
-                <button id="calculate" class="btn btn-success">5 </button>
-                <button id="calculate" class="btn btn-success">6 </button>
-                <button id="calculate" class="btn btn-success">* </button>
-                <button id="calculate" class="btn btn-success">( </button>
-                <button id="calculate" class="btn btn-success">) </button>
+                <button class="btn btn-secondary" onclick="input_val('4')">4 </button>
+                <button class="btn btn-secondary" onclick="input_val('5')">5 </button>
+                <button class="btn btn-secondary" onclick="input_val('6')">6 </button>
+                <button class="btn btn-primary" onclick="input_val('*')">* </button>
+                <button class="btn btn-outline-secondary" onclick="input_val('(')">( </button>
+                <button class="btn btn-outline-secondary" onclick="input_val(')')">) </button>
             </div>
             <div class="col">
             </div>
@@ -104,12 +121,12 @@
             <div class="col">
             </div>
             <div class="col mx-auto">
-                <button id="calculate" class="btn btn-success">1 </button>
-                <button id="calculate" class="btn btn-success">2 </button>
-                <button id="calculate" class="btn btn-success">3 </button>
-                <button id="calculate" class="btn btn-success">- </button>
-                <button id="calculate" class="btn btn-success">x² </button>
-                <button id="calculate" class="btn btn-success">√ </button>
+                <button class="btn btn-secondary" onclick="input_val('1')">1 </button>
+                <button class="btn btn-secondary" onclick="input_val('2')">2 </button>
+                <button class="btn btn-secondary" onclick="input_val('3')">3 </button>
+                <button class="btn btn-primary" onclick="input_val('-')">- </button>
+                <button class="btn btn-outline-secondary" onclick="power()">^ </button>
+                <button class="btn btn-outline-secondary" onclick="sqrt()">√ </button>
             </div>
             <div class="col">
             </div>
@@ -118,11 +135,11 @@
             <div class="col">
             </div>
             <div class="col mx-auto">
-                <button id="calculate" class="btn btn-success">0 </button>
-                <button id="calculate" class="btn btn-success">00 </button>
-                <button id="calculate" class="btn btn-success">. </button>
-                <button id="calculate" class="btn btn-success">+ </button>
-                <button id="calculate" class="btn btn-success">= </button>
+                <button class="btn btn-secondary" onclick="input_val('0')">0 </button>
+                <button class="btn btn-secondary" onclick="input_val('00')">00 </button>
+                <button class="btn btn-secondary" onclick="input_val('.')">. </button>
+                <button class="btn btn-primary" onclick="input_val('+')">+ </button>
+                <button id="=" class="btn btn-success">= </button>
             </div>
             <div class="col">
             </div>
